@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Movie Library</title>
+    <script src="/lib/angular/angular.js"></script>
+    <script src='/app.module.js'></script>
+    <script src="/movies/movieCtrl.js "></script>
+    <script src=" /common/common.module.ui.js "></script>
+    <script src="/layout/topBar.directive.js"></script>
+</head>
+
+<body ng-app="movies">
+    <top-bar></top-bar>
+    <div ng-controller="MovieCtrl as vm">
+        <table ng-repeat="movie in vm.movies">
+            <tr>
+                <td>
+                    {{movie.title}}
+                </td>
+
+            </tr>
+        </table>
+        <button ng-click="vm.click() ">Click me</button>
+    </div>
+
+</body>
+
+</html>
