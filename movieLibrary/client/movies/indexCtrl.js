@@ -3,10 +3,10 @@
 
     angular
         .module('movies')
-        .controller('MovieCtrl', MovieCtrl);
+        .controller('IndexCtrl', IndexCtrl);
 
     /** @ngInject */
-    function MovieCtrl() {
+    function IndexCtrl() {
         var vm = this;
         vm.movies = [{
                 title: 'Titile 1',

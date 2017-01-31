@@ -2,25 +2,40 @@
 
 <head>
     <title>Movie Library</title>
+
+    <!--library files-->
     <script src="/lib/angular/angular.js"></script>
-    <script src='/app.module.js'></script>
-    <script src="/movies/movieCtrl.js "></script>
+    <script src="/lib/angular-route/angular-route.js"></script>
+
+    <!--modules-->
     <script src=" /common/common.module.ui.js "></script>
+    <script src="/common/common.module.core.js"></script>
+    <script src='/app.module.js'></script>
+
+
     <script src="/layout/topBar.directive.js"></script>
+    <script src="/layout/sideBar.directive.js"></script>
+    <script src="/movies/indexCtrl.js "></script>
+    <script src="/movies/detailsCtrl.js "></script>
+
+
+
+
+
 </head>
 
 <body ng-app="movies">
     <top-bar></top-bar>
-    <div ng-controller="MovieCtrl as vm">
-        <table ng-repeat="movie in vm.movies">
-            <tr>
-                <td>
-                    {{movie.title}}
-                </td>
-
-            </tr>
-        </table>
-        <button ng-click="vm.click() ">Click me</button>
+    <div class="row-offcanvas row-offcanvas-left">
+        <side-bar></side-bar>
+        <div id="main">
+            <div class="col-md-12">
+                <p class="visible-xs">
+                    <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                </p>
+                <div class="page {{ pageClass }}" ng-view></div>
+            </div>
+        </div>
     </div>
 
 </body>
