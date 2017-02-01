@@ -5,9 +5,10 @@
         .module('movies', ['common.ui', 'common.core'])
         .config(config);
 
-    config.$inject = ['$routeProvider'];
+    config.$inject = ['$routeProvider', '$locationProvider'];
 
-    function config($routeProvider) {
+
+    function config($routeProvider, $locationProvider) {
         $routeProvider
             .when('/movies', {
                 templateUrl: '/movies/index.html',
@@ -17,5 +18,10 @@
                 templateUrl: '/movies/details.html',
                 controller: 'DetailsCtrl'
             });
+        $locationProvider.html5Mode({
+            enabled: true,
+            requireBase: false
+        });
     };
+    location
 }());
