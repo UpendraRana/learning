@@ -1,11 +1,24 @@
-<html>
+<!DOCTYPE html>
+<html ng-app="movies">
 
 <head>
     <title>Movie Library</title>
+    <!--css files-->
+    <link href="/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="/lib/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="/content/sitemy.css" rel="stylesheet" />
+    <!--<link href="/content/site.css" rel="stylesheet" />-->
+
+
+
+
 
     <!--library files-->
     <script src="/lib/angular/angular.js"></script>
     <script src="/lib/angular-route/angular-route.js"></script>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.js"></script>
+
 
     <!--modules-->
     <script src=" /common/common.module.ui.js "></script>
@@ -17,14 +30,16 @@
     <script src="/layout/sideBar.directive.js"></script>
     <script src="/movies/indexCtrl.js "></script>
     <script src="/movies/detailsCtrl.js "></script>
+    <script src="/dashboard/dashboardCtrl.js "></script>
+    <script src="/rentals/rentalsCtrl.js "></script>
 </head>
 
-<body ng-app="movies">
+<body>
     <top-bar></top-bar>
     <div class="row-offcanvas row-offcanvas-left">
         <side-bar></side-bar>
         <div id="main">
-            <div class="col-md-12">
+            <div class="col-md-11">
                 <p class="visible-xs">
                     <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas"><i class="glyphicon glyphicon-chevron-left"></i></button>
                 </p>

@@ -17,7 +17,16 @@
             .when('/movies/:id', {
                 templateUrl: '/movies/details.html',
                 controller: 'DetailsCtrl'
+            })
+            .when('/', {
+                templateUrl: '/dashboard/dashboard.html',
+                controller: 'DashboardCtrl'
+            })
+            .when('/rentals', {
+                templateUrl: '/rentals/rentals.html',
+                controller: 'RentalsCtrl'
             });
+
         $locationProvider.html5Mode({
             enabled: true,
             requireBase: false
