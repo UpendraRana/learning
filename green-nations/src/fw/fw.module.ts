@@ -9,6 +9,8 @@ import { StatusBarComponent } from "fw/status-bar/status-bar.component";
 import { ScreenService } from "fw/service/screen.service";
 import { ScreenLarge } from "fw/directives/screen-large.directive";
 import { ScreenBelowLarge } from "fw/directives/screen-below-large.directive";
+import { MenuService } from "fw/service/menu.service";
+import { MenuComponent } from "fw/menus/menu/menu.component";
 
 
 
@@ -18,7 +20,8 @@ import { ScreenBelowLarge } from "fw/directives/screen-below-large.directive";
   ],
   providers: [
     FrameworkConfigService,
-    ScreenService
+    ScreenService,
+    MenuService
   ],
   declarations: [
     FrameworkBodyComponent,
@@ -27,7 +30,8 @@ import { ScreenBelowLarge } from "fw/directives/screen-below-large.directive";
     TopBarComponent,
     StatusBarComponent,
     ScreenLarge,
-    ScreenBelowLarge
+    ScreenBelowLarge,
+    MenuComponent
   ],
 
   exports: [FrameworkBodyComponent]

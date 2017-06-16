@@ -1,13 +1,19 @@
 import { Component } from '@angular/core';
 import { FrameworkConfigService, FrameworkConfigSettings } from "fw/service/framework-config.service";
+import { MenuService } from "fw/service/menu.service";
+import { initialMenuItems } from "app/app.menu";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
+
 export class AppComponent {
-  constructor(private frameworkConfigService: FrameworkConfigService) {
+  constructor(private frameworkConfigService: FrameworkConfigService,
+    private menuService: MenuService) {
+
     let config: FrameworkConfigSettings = {
       socialIcons: [
         { imageFile: 'assets/social-fb-bw.png', alt: 'Facebook', link: 'http://www.facebook.com' },
@@ -20,5 +26,7 @@ export class AppComponent {
       showStatusBarBreakpoint: 800
     };
     frameworkConfigService.configure(config);
+    menuService.items = initialMenuItems;
+
   }
 }
