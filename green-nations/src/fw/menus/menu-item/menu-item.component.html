@@ -1,5 +1,4 @@
-<div class=menu=item>
-    <span class="glyphicon {{item.icon}}"></span>
+<div class="menu-item" [routerLink]="item.route" routerLinkActive='router-link-active' [ngClass]="{'vertical-menu': menuService.isVertical}" (click)="menuService.toggleLeftSideMenu()">
+    <span class=" glyphicon {{item.icon}} "></span>
     <span>{{item.text.toUpperCase()}}</span>
-
 </div>

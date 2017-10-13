@@ -1,3 +1,5 @@
 node_modules
 lib
 jspm_packages
+/LearnXamarin/Chipotle/obj
+/LearnXamarin/Chipotle/bin

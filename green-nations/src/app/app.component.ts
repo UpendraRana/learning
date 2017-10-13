@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
 import { FrameworkConfigService, FrameworkConfigSettings } from "fw/service/framework-config.service";
+
+import { Component } from '@angular/core';
 import { MenuService } from "fw/service/menu.service";
 import { initialMenuItems } from "app/app.menu";
 
@@ -26,7 +27,7 @@ export class AppComponent {
       showStatusBarBreakpoint: 800
     };
     frameworkConfigService.configure(config);
-    menuService.items = initialMenuItems;
+    menuService.items = initialMenuItems;   
 
   }
 }
