@@ -1,0 +1,6 @@
+1.Components- Simple functions. 
+2.Reactive updates.
+3.Virtual views in memory - Instead of recreating the whole DOM tree again React has the virtual DOM in memory all the time, so when a new Data arrives from the server or state needs to be changed it only changes the part of the DOM which needs to be updated.
+
+Functional component -
+Class component
